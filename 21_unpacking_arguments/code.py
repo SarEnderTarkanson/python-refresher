@@ -6,7 +6,7 @@ def multiply(*args):
 
     return total
 
-print(multiply(1, 5, 6))
+print(multiply(2, 3, 4))
 
 def apply(*args, operator):
     if operator == "*":
