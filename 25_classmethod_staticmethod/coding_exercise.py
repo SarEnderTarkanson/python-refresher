@@ -15,12 +15,14 @@ class Store:
             total += item['price']
         return total
 
-    # @classmethod
-    # def franchise(cls, store):
-    #     return cls()
-    #     # Return another store, with the same name as the argument's name, plus " - franchise"
+    @classmethod
+    def franchise(cls, store):
+        new_store = cls(store.name + " - franchise")
+        return new_store
+        # Return another store, with the same name as the argument's name, plus " - franchise"
 
-    # @staticmethod
-    # def store_details(store):
-    #     # Return a string representing the argument
-    #     # It should be in the format 'NAME, total stock price: TOTAL'
+    @staticmethod
+    def store_details(store):
+        return '{}, total stock price: {}'.format(store.name, int(store.stock_price()))
+        # Return a string representing the argument
+        # It should be in the format 'NAME, total stock price: TOTAL'
